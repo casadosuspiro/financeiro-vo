@@ -230,12 +230,12 @@
   } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
   var firebaseConfig = {
-    apiKey: "AIzaSyC_UCU9R3q2oeN_uEXosJSDdt8ABjzwYe4",
-    authDomain: "crm-financeiro-5b3bc.firebaseapp.com",
-    projectId: "crm-financeiro-5b3bc",
-    storageBucket: "crm-financeiro-5b3bc.firebasestorage.app",
-    messagingSenderId: "828717699898",
-    appId: "1:828717699898:web:b7bd95da9045d13af9b603"
+    apiKey: "AIzaSyAt-GhNCg91XH8TDh2RbAgZlqj-CWfwsFY",
+    authDomain: "financeiro-vo.firebaseapp.com",
+    projectId: "financeiro-vo",
+    storageBucket: "financeiro-vo.firebasestorage.app",
+    messagingSenderId: "983217623740",
+    appId: "1:983217623740:web:7a8bd671aa17fa6846b6b9"
   };
 
   var fbApp = initializeApp(firebaseConfig);
@@ -249,7 +249,7 @@
 
   var state = {
     tab: 'dashboard',
-    month: { y: 2026, m: 9 },
+    month: { y: new Date().getFullYear(), m: new Date().getMonth() + 1 },
     recorrentes: [],
     pontuais: [],
     despesas: [],
@@ -269,7 +269,7 @@
   };
 
   // ---------- storage (Firestore = synced across devices; localStorage = instant local cache) ----------
-  var CACHE_KEY = 'financeiro-data-cache';
+  var CACHE_KEY = 'financeiro-vo-data-cache';
   var persistTimer = null;
   var applyingRemote = false;
 
